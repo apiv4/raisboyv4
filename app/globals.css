@@ -1,0 +1,135 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Swiss Modernism Dark Theme - Raisboy API Docs */
+  --background: #0D1B2A;
+  --foreground: #F0F0F0;
+  --card: #1B263B;
+  --card-foreground: #F0F0F0;
+  --popover: #1B263B;
+  --popover-foreground: #F0F0F0;
+  --primary: #00FFFF;
+  --primary-foreground: #0D1B2A;
+  --secondary: #1B263B;
+  --secondary-foreground: #F0F0F0;
+  --muted: #1B263B;
+  --muted-foreground: #778DA9;
+  --accent: #00FFFF;
+  --accent-foreground: #0D1B2A;
+  --destructive: #E74C3C;
+  --destructive-foreground: #FFFFFF;
+  --border: #2E3F56;
+  --input: #1B263B;
+  --ring: #00FFFF;
+  --chart-1: #00FFFF;
+  --chart-2: #49CC90;
+  --chart-3: #2ECC71;
+  --chart-4: #778DA9;
+  --chart-5: #415A77;
+  --radius: 0.5rem;
+  --sidebar: #1B263B;
+  --sidebar-foreground: #F0F0F0;
+  --sidebar-primary: #00FFFF;
+  --sidebar-primary-foreground: #0D1B2A;
+  --sidebar-accent: #0D1B2A;
+  --sidebar-accent-foreground: #F0F0F0;
+  --sidebar-border: #2E3F56;
+  --sidebar-ring: #00FFFF;
+
+  /* Custom tokens */
+  --navy-primary: #0D1B2A;
+  --navy-secondary: #1B263B;
+  --navy-tertiary: #415A77;
+  --cyan-accent: #00FFFF;
+  --text-primary: #F0F0F0;
+  --text-secondary: #A9A9A9;
+  --text-tertiary: #778DA9;
+  --success: #2ECC71;
+  --error: #E74C3C;
+  --http-post: #49CC90;
+  --border-color: #2E3F56;
+  --hero-bg: #000000;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-mono: 'Roboto Mono', 'Roboto Mono Fallback', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: rgba(0, 255, 255, 0.5);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-size: 16px;
+  }
+}
+
+/* Scrollbar styling for the dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--navy-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--navy-tertiary);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-accent);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(0, 255, 255, 0.2);
+  color: var(--text-primary);
+}
